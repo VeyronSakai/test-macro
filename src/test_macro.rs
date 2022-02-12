@@ -5,7 +5,7 @@ macro_rules! test_eq {
         fn $func_name() {
             assert_eq!($arg, $ans);
         }
-    }
+    };
 }
 
 #[macro_export]
@@ -15,5 +15,5 @@ macro_rules! test_ne {
         fn $func_name() {
             assert_ne!($arg, $ans);
         }
-    }
+    };
 }

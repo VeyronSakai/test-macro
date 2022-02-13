@@ -5,7 +5,7 @@ edition = "2021"
 license-file = "LICENSE"
 authors = ["Yuki Sakai <yuukisakai123@gmail.com>"]
 description = "This is a macro for writing Rust test code in an easy way."
-documentation = "https://github.com/VeyronSakai/test-macro"
+repository = "https://github.com/VeyronSakai/test-macro"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

@@ -1,5 +1,8 @@
-[![Execute test](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml/badge.svg)](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml)
 # test-macro
+[![Execute test](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml/badge.svg)](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/test-macro.svg)](https://crates.io/crates/test-macro)
+[![Crates.io](https://img.shields.io/crates/d/test-macro.svg)](https://crates.io/crates/test-macro)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 ## Overview
 

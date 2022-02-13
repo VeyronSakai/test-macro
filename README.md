@@ -36,7 +36,7 @@ If you want to write it outside the tests directory, you can write it as follows
 #[cfg(test)]
 mod tests {
     use test_macro::*;
-    test_eq!(test1, add(1, 2) => 3);
+    test_eq!(test_case_name, add(1, 2) => 3);
 }
 ```
 

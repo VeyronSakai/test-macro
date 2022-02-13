@@ -48,7 +48,7 @@ macro_rules! test_eq {
 /// If you want to test this add function, you can write it as follows
 ///
 /// ```
-/// test_macro::test_eq!(test_case_name, add(1, 2) => 0);
+/// test_macro::test_ne!(test_case_name, add(1, 2) => 0);
 /// ```
 #[macro_export]
 macro_rules! test_ne {

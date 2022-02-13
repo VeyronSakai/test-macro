@@ -5,6 +5,7 @@ edition = "2021"
 license-file = "LICENSE"
 authors = ["Yuki Sakai <yuukisakai123@gmail.com>"]
 description = "This is a macro for writing Rust test code in an easy way."
+readme = "README.md"
 repository = "https://github.com/VeyronSakai/test-macro"
 
 

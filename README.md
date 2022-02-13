@@ -1,3 +1,4 @@
+[![Execute test](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml/badge.svg)](https://github.com/VeyronSakai/test-macro/actions/workflows/ci.yml)
 # test-macro
 
 ## Overview

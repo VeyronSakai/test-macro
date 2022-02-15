@@ -59,3 +59,33 @@ macro_rules! test_ne {
         }
     };
 }
+
+/// Test to see if it panics as expected.
+///
+/// The first argument should be the test case name,
+/// and the second argument should be the function or macro which is expected to panic internally.
+///
+///
+/// # Example
+///
+/// ```
+/// test_macro::test_ne!(test_case_name, panic!());
+/// ```
+///
+/// ```
+/// fn panic() {
+///     panic!();
+/// }
+///
+/// test_macro::test_ne!(test_case_name, panic());
+/// ```
+#[macro_export]
+macro_rules! test_should_panic {
+    ($func_name:ident, $func:expr) => {
+        #[test]
+        #[should_panic]
+        fn $func_name() {
+            $func;
+        }
+    };
+}

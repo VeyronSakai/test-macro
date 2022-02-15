@@ -17,10 +17,10 @@
 /// If you want to test this add function, you can write it as follows
 ///
 /// ```
-/// test_macro::test_eq!(test_case_name, add(1, 2) => 3);
+/// test_macro::test_assert_eq!(test_case_name, add(1, 2) => 3);
 /// ```
 #[macro_export]
-macro_rules! test_eq {
+macro_rules! test_assert_eq {
     ($func_name:ident, $arg:expr => $ans:expr) => {
         #[test]
         fn $func_name() {
@@ -48,10 +48,10 @@ macro_rules! test_eq {
 /// If you want to test this add function, you can write it as follows
 ///
 /// ```
-/// test_macro::test_ne!(test_case_name, add(1, 2) => 0);
+/// test_macro::test_assert_ne!(test_case_name, add(1, 2) => 0);
 /// ```
 #[macro_export]
-macro_rules! test_ne {
+macro_rules! test_assert_ne {
     ($func_name:ident, $arg:expr => $ans:expr) => {
         #[test]
         fn $func_name() {
@@ -69,7 +69,7 @@ macro_rules! test_ne {
 /// # Example
 ///
 /// ```
-/// test_macro::test_ne!(test_case_name, panic!());
+/// test_macro::test_should_panic!(test_case_name, panic!());
 /// ```
 ///
 /// ```
@@ -77,7 +77,7 @@ macro_rules! test_ne {
 ///     panic!();
 /// }
 ///
-/// test_macro::test_ne!(test_case_name, panic());
+/// test_macro::test_should_panic!(test_case_name, panic());
 /// ```
 #[macro_export]
 macro_rules! test_should_panic {

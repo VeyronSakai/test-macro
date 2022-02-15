@@ -8,6 +8,8 @@ fn panic() {
     panic!();
 }
 
+test_assert!(test_assert, true);
+
 test_assert_eq!(test_eq_test1, 1 + 2 => 3);
 test_assert_eq!(test_eq_test2, add(1, 2) => 3);
 

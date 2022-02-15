@@ -1,3 +1,31 @@
+/// Test that the given argument is expected to be true.
+///
+/// The first argument should be the test case name,
+/// and the second argument should be the arguments which is expected to be 'true'.
+///
+/// # Example
+///
+/// ```
+/// fn is_err() -> bool {
+///      true
+/// }
+/// ```
+///
+/// If you want to test this is_err function, you can write it as follows
+///
+/// ```
+/// test_macro::test_assert!(test_case_name, is_err());
+/// ```
+#[macro_export]
+macro_rules! test_assert {
+    ($func_name:ident, $arg:expr) => {
+        #[test]
+        fn $func_name() {
+            assert!($arg);
+        }
+    };
+}
+
 /// Generate a test code that internally uses assert_eq!.
 ///
 /// The first argument should be the test case name,
@@ -64,7 +92,6 @@ macro_rules! test_assert_ne {
 ///
 /// The first argument should be the test case name,
 /// and the second argument should be the function or macro which is expected to panic internally.
-///
 ///
 /// # Example
 ///

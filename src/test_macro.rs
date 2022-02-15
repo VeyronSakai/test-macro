@@ -106,11 +106,23 @@ macro_rules! test_assert_ne {
 ///
 /// test_macro::test_should_panic!(test_case_name, panic());
 /// ```
+///
+/// Expected error message can be tested.
+/// ```
+/// test_macro::test_should_panic!(test_case_name, "expected error message", panic("{}", String::from("expected error message")));
+/// ```
 #[macro_export]
 macro_rules! test_should_panic {
     ($func_name:ident, $func:expr) => {
         #[test]
         #[should_panic]
+        fn $func_name() {
+            $func;
+        }
+    };
+    ($func_name:ident, $message:literal, $func:expr) => {
+        #[test]
+        #[should_panic(expected = $message)]
         fn $func_name() {
             $func;
         }

@@ -14,7 +14,7 @@ Crate has to be added as a dev-dependency to Cargo.toml.
 
 ```toml
 [dev-dependencies]
-test-macro = "0.1.7"
+test-macro = "0.1.8"
 ```
 
 ## Example Usage

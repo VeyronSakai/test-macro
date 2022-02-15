@@ -14,7 +14,7 @@ Crate has to be added as a dev-dependency to Cargo.toml.
 
 ```toml
 [dev-dependencies]
-test-macro = "0.1.6"
+test-macro = "0.1.7"
 ```
 
 ## Example Usage
@@ -31,7 +31,7 @@ In this case, if you want to write the test code in the tests directory, you can
 
 ```rust
 // Need to import add function.
-test_macro::test_eq!(test_case_name, add(1, 2) => 3);
+test_macro::test_assert_eq!(test_case_name, add(1, 2) => 3);
 ```
 
 If you want to write it outside the tests directory, you can write it as follows.
@@ -40,7 +40,7 @@ If you want to write it outside the tests directory, you can write it as follows
 #[cfg(test)]
 mod tests {
     use test_macro::*;
-    test_eq!(test_case_name, add(1, 2) => 3);
+    test_assert_eq!(test_case_name, add(1, 2) => 3);
 }
 ```
 
